@@ -1,6 +1,35 @@
 {
   "intents": [
     {
+      "intent": "DeathPenaltyIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+
+    {
+      "intent": "PrivatePrisonsIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+
+    {
+      "intent": "DrugPolicyIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+    {
       "intent": "CollegeTuitionIntent",
       "slots": [
       {
@@ -9,8 +38,9 @@
       }
      ]
     },
+
     {
-      "intent": "MinimunWageIntent",
+      "intent": "FrackingIntent",
       "slots": [
       {
         "name" : "Candidate",
@@ -18,8 +48,9 @@
       }
      ]
     },
+
     {
-      "intent": "BuildingWallIntent",
+      "intent": "ClimateChangeHumanCausedIntent",
       "slots": [
       {
         "name" : "Candidate",
@@ -27,6 +58,98 @@
       }
      ]
     },
+
+    {
+      "intent": "MinimumWageIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+
+    {
+      "intent": "RecreationalWeedIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+
+    {
+      "intent": "AbortionIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+
+    {
+      "intent": "GayMarriageIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+
+    {
+      "intent": "SyrianRefugeesIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+
+    {
+      "intent": "FenceWallIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+
+    {
+      "intent": "PhysicianAssistedSuicideIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+
+    {
+      "intent": "HealthCareRightIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+
+
+    {
+      "intent": "ISISGroundTroopsIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+
 
    {
       "intent": "AMAZON.HelpIntent"
