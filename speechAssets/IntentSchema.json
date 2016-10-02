@@ -150,6 +150,14 @@
      ]
     },
 
+    {
+      "intent": "ListIssuesIntent",
+      "slots": [
+      {
+        
+      }
+     ]
+    },
 
    {
       "intent": "AMAZON.HelpIntent"

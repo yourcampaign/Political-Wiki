@@ -1,11 +1,92 @@
+DeathPenaltyIntent how is {Candidate} on the death penalty
+DeathPenaltyIntent {Candidate} on private the death penalty
+DeathPenaltyIntent what is {Candidate} stance on death penalty
+
+PrivatePrisonsIntent how is {Candidate} on private prisons
+PrivatePrisonsIntent {Candidate} on private prisons
+PrivatePrisonsIntent what is {Candidate} stance on private prisons
+
+DrugPolicyIntent how is {Candidate} on drug policy
+DrugPolicyIntent {Candidate} on drug policy
+DrugPolicyIntent what is {Candidate} stance on drug policy
+
 CollegeTuitionIntent how is {Candidate} on college tuition
 CollegeTuitionIntent {Candidate} on college tuition
 CollegeTuitionIntent what is {Candidate} stance on college tuition
 
-MinimunWageIntent how is {Candidate} on minimum wage
-CollegeTuitionIntent {Candidate} on college tuition
-CollegeTuitionIntent what is {Candidate} stance on college tuition
+FrackingIntent how is {Candidate} on fracking
+FrackingIntent {Candidate} on fracking
+FrackingIntent what is {Candidate} stance on fracking
 
-BuildingWallIntent how is {Candidate} on building a wall
-BuildingWallIntent {Candidate} on building a wall
-BuildingWallIntent what is {Candidate} stance on building a wall
+ClimateChangeHumanCausedIntent  how is {Candidate} on climate change
+ClimateChangeHumanCausedIntent  {Candidate} on climate change
+ClimateChangeHumanCausedIntent  what is {Candidate} stance on climate change
+
+MinimunWageIntent how is {Candidate} on minimum wage
+MinimunWageIntent {Candidate} on minimum wage
+MinimunWageIntent what is {Candidate} stance on minimum wage
+
+RecreationalWeedIntent how is {Candidate} on recreational marijuana
+RecreationalWeedIntent {Candidate} on recreational marijuana
+RecreationalWeedIntent what is {Candidate} stance on recreational marijuana
+RecreationalWeedIntent how is {Candidate} on recreational weed
+RecreationalWeedIntent {Candidate} on recreational weed
+RecreationalWeedIntent what is {Candidate} stance on recreational weed
+
+AbortionIntent how is {Candidate} on abortion
+AbortionIntent {Candidate} on abortion
+AbortionIntent what is {Candidate} stance on abortion
+
+GayMarriageIntent how is {Candidate} on gay marriage
+GayMarriageIntent {Candidate} on gay marriage
+GayMarriageIntent what is {Candidate} stance on gay marriage
+
+SyrianRefugeesIntent how is {Candidate} on gay marriage
+SyrianRefugeesIntent {Candidate} on gay marriage
+SyrianRefugeesIntent what is {Candidate} stance on gay marriage
+
+FenceWallIntent how is {Candidate} on building a wall
+FenceWallIntent {Candidate} on building a wall
+FenceWallIntent what is {Candidate} stance on building a wall
+
+PhysicianAssistedSuicideIntent how is {Candidate} on physician assisted suicide
+PhysicianAssistedSuicideIntent {Candidate} on physician assisted suicide
+PhysicianAssistedSuicideIntent what is {Candidate} stance on physician assisted suicide
+PhysicianAssistedSuicideIntent how is {Candidate} on physician assisted euthanasia
+PhysicianAssistedSuicideIntent {Candidate} on physician assisted euthanasia
+PhysicianAssistedSuicideIntent what is {Candidate} stance on physician assisted euthanasia
+
+HealthCareRightIntent how is {Candidate} on health care rights
+HealthCareRightIntent {Candidate} on health care rights
+HealthCareRightIntent what is {Candidate} stance on health care rights
+HealthCareRightIntent how is {Candidate} on the right to health care
+HealthCareRightIntent {Candidate} on the right to health care
+HealthCareRightIntent what is {Candidate} stance on the right to health care
+HealthCareRightIntent how is {Candidate} on right to health care
+HealthCareRightIntent {Candidate} on right to health care
+HealthCareRightIntent what is {Candidate} stance on right to health care
+
+
+ISISGroundTroopsIntent how is {Candidate} on sending ground troops to fight isis
+ISISGroundTroopsIntent {Candidate} on sending ground troops to fight isis
+ISISGroundTroopsIntent what is {Candidate} stance on sending ground troops to fight isis
+
+ISISGroundTroopsIntent how is {Candidate} on sending troops to fight isis
+ISISGroundTroopsIntent {Candidate} on sending troops to fight isis
+ISISGroundTroopsIntent what is {Candidate} stance on sending troops to fight isis
+
+ISISGroundTroopsIntent how is {Candidate} on sending troops to combat isis
+ISISGroundTroopsIntent {Candidate} on sending ground troops to combat isis
+ISISGroundTroopsIntent what is {Candidate} stance on sending troops to combat isis
+
+ISISGroundTroopsIntent how is {Candidate} on sending ground troops to combat isis
+ISISGroundTroopsIntent {Candidate} on sending ground ground troops to combat isis
+ISISGroundTroopsIntent what is {Candidate} stance on sending ground troops to combat isis
+
+ListIssuesIntent list
+ListIssuesIntent what are the issues
+ListIssuesIntent what issues are there
+ListIssuesIntent Help me ask the real questions
+ListIssuesIntent real questions
+ListIssuesIntent ask the real questions
+ListIssuesIntent ask real questions
