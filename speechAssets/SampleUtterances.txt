@@ -1,0 +1,11 @@
+CollegeTuitionIntent how is {Candidate} on college tuition
+CollegeTuitionIntent {Candidate} on college tuition
+CollegeTuitionIntent what is {Candidate} stance on college tuition
+
+MinimunWageIntent how is {Candidate} on minimum wage
+CollegeTuitionIntent {Candidate} on college tuition
+CollegeTuitionIntent what is {Candidate} stance on college tuition
+
+BuildingWallIntent how is {Candidate} on building a wall
+BuildingWallIntent {Candidate} on building a wall
+BuildingWallIntent what is {Candidate} stance on building a wall

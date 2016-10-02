@@ -1,0 +1,41 @@
+{
+  "intents": [
+    {
+      "intent": "CollegeTuitionIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+    {
+      "intent": "MinimunWageIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+    {
+      "intent": "BuildingWallIntent",
+      "slots": [
+      {
+        "name" : "Candidate",
+        "type": "LIST_OF_CANDIDATES"
+      }
+     ]
+    },
+
+   {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
