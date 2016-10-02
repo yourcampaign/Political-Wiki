@@ -1,0 +1,3 @@
+RecipeIntent {Item}
+RecipeIntent what is {Item} stance on the {Issue}
+RecipeIntent what is {Item} stance on {Issue}

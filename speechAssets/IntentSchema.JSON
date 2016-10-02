@@ -1,0 +1,27 @@
+{
+  "intents": [
+    {
+      "intent": "RecipeIntent",
+      "slots": [
+      {
+        "name" : "Item",
+        "type": "LIST_OF_ITEMS"
+      },
+      {
+        "name" : "Issue",
+        "type": "LIST_OF_ISSUES"
+      }
+      ]
+      
+    },
+   {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
