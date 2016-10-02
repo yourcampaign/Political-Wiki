@@ -1,10 +1,7 @@
 /**
     Copyright 2014-2015 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
     Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
-
         http://aws.amazon.com/apache2.0/
-
     or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
@@ -22,7 +19,7 @@
 'use strict';
 
 var AlexaSkill = require('./AlexaSkill'),
-    recipes = require('./recipes');
+    stances = require('./stances');
 
 var APP_ID = undefined; //OPTIONAL: replace with 'amzn1.echo-sdk-ams.app.[your-unique-value-here]';
 
@@ -32,7 +29,7 @@ var APP_ID = undefined; //OPTIONAL: replace with 'amzn1.echo-sdk-ams.app.[your-u
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance
  */
-var Stance = function () {
+var CandidateStance = function () {
     AlexaSkill.call(this, APP_ID);
 };
 
@@ -53,11 +50,11 @@ CandidateStance.prototype.intentHandlers = {
         var candidateSlot = intent.slots.Candidate,
             candidateName;
         if (candidateSlot && candidateSlot.value){
-            slotName = candidateSlot.value.toLowerCase();
+            candidateName = candidateSlot.value.toLowerCase();
         }
 
-        var cardTitle = slotName +". ",
-            stance = stances[candidateName + " " +" "],
+        var cardTitle = candidateName +". ",
+            stance = stances[candidateName + " College_Tuition"],
             speechOutput,
             repromptOutput;
         if (stance) {
@@ -65,10 +62,10 @@ CandidateStance.prototype.intentHandlers = {
                 speech: stance,
                 type: AlexaSkill.speechOutputType.PLAIN_TEXT
             };
-            response.tell(speechOutput, cardTitle, recipe);
+            response.tell(speechOutput);
         } else {
             var speech;
-            if (itemName) {
+            if (candidateName) {
                 speech = "I'm sorry, I currently do not know the stance for " + candidateName + ". What else can I help with?";
             } else {
                 speech = "I'm sorry, I currently do not know that info. What else can I help with?";
@@ -111,50 +108,6 @@ CandidateStance.prototype.intentHandlers = {
 };
 
 exports.handler = function (event, context) {
-    var CandidateStance = new CandidateStance();
-    CandidateStance.execute(event, context);
+    var candidateStance = new CandidateStance();
+    candidateStance.execute(event, context);
 };
-
-/*
-
-function makePollRequest(pollRequestCallback){
-  var endpoint = 'http://elections.huffingtonpost.com/pollster/api/polls.json?chart=2016-general-election-trump-vs-clinton&sort&after=2016-09-29';
-  //location of the API for poll statistics
-
-  //handles the API url and converts everything into JSON format
-  http.get(endpoint, function(res){
-    var pollsResponseString = '';
-    console.log('Status Code: ' + res.statusCode);
-
-    //If not proper an error is thrown
-    if(res.statusCode != 200){
-      pollRequestCallback( new Error("Non 200 Response"));
-    }
-
-    //appends data to the string that holds JSON data
-    res.on('data', function(data){
-      pollsResponseString += data;
-    });
-
-    //converts pollsResponseString into a JSON object
-    res.on('end', function(){
-      var pollsResponseObject = JSON.parse(pollsResponseString);
-
-      if (pollsResponseObject.error) {
-                console.log("Polls error: " + pollsResponseObj.error.message);
-                pollRequestCallback(new Error(pollsResponseObj.error.message));
-            } else {
-                //if no errors then getCurrentPolls is called and Alexa will read data from API
-                var curPolls = getCurrentPolls(pollsResponseObject);
-                pollsResponseObject(null, curPolls);
-            }
-    });
-  }).on('error', function(e){
-      console.log("Communications error: " + e.message);
-      pollRequestCallback(new Error(e.message));
-});
-}
-function getCurrentPolls(pollsResponseObj){
-
-}
-*/

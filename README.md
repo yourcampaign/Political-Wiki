@@ -10,13 +10,11 @@ Usage
 -----
 - IssuesIntent what are Trump's views on Syrian refugees
 - IssuesIntent how does Hillary feel about abortion
+- IssuesIntent help me ask the real questions
 
 Features
 --------
-- Retrieve polling information about candidates.
-- Retrieve important dates such as polling dates, or the dates of presidential debates.
-- Geo-location services: Know where the nearest voting station is.
-- Find out each presidential candidate's view on a certain issue.
+- Retrieve each presidential candidate's stance on various issues
 
 Contribute
 ----------
