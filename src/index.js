@@ -47,7 +47,7 @@ CandidateStance.prototype.eventHandlers.onLaunch = function (launchRequest, sess
 
 CandidateStance.prototype.intentHandlers = {
     "CollegeTuitonIntent": function (intent, session, response) {
-        var candidateSlot = intent.slots.Item,
+        var candidateSlot = intent.slots.Candidate,
             candidateName;
         if (candidateSlot && candidateSlot.value){
             candidateName = candidateSlot.value.toLowerCase();
