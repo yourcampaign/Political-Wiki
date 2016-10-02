@@ -119,19 +119,24 @@ exports.handler = function (event, context) {
 
 function makePollRequest(pollRequestCallback){
   var endpoint = 'http://elections.huffingtonpost.com/pollster/api/polls.json?chart=2016-general-election-trump-vs-clinton&sort&after=2016-09-29';
+  //location of the API for poll statistics
 
+  //handles the API url and converts everything into JSON format
   http.get(endpoint, function(res){
     var pollsResponseString = '';
     console.log('Status Code: ' + res.statusCode);
 
+    //If not proper an error is thrown
     if(res.statusCode != 200){
       pollRequestCallback( new Error("Non 200 Response"));
     }
 
+    //appends data to the string that holds JSON data
     res.on('data', function(data){
       pollsResponseString += data;
     });
 
+    //converts pollsResponseString into a JSON object
     res.on('end', function(){
       var pollsResponseObject = JSON.parse(pollsResponseString);
 
@@ -139,13 +144,15 @@ function makePollRequest(pollRequestCallback){
                 console.log("Polls error: " + pollsResponseObj.error.message);
                 pollRequestCallback(new Error(pollsResponseObj.error.message));
             } else {
-              Alexa.tell
+                //if no errors then getCurrentPolls is called and Alexa will read data from API
                 var curPolls = getCurrentPolls(pollsResponseObject);
                 pollsResponseObject(null, curPolls);
             }
     });
-
-  })
+  }).on('error', function(e){
+      console.log("Communications error: " + e.message);
+      pollRequestCallback(new Error(e.message));
+});
 }
 function getCurrentPolls(pollsResponseObj){
 
