@@ -115,8 +115,10 @@ exports.handler = function (event, context) {
     CandidateStance.execute(event, context);
 };
 
+/*
+
 function makePollRequest(pollRequestCallback){
-  var endpoint = 'http://elections.huffingtonpost.com/pollster/api/polls.json?chart=2016-general-election-trump-vs-clinton';
+  var endpoint = 'http://elections.huffingtonpost.com/pollster/api/polls.json?chart=2016-general-election-trump-vs-clinton&sort&after=2016-09-29';
 
   http.get(endpoint, function(res){
     var pollsResponseString = '';
@@ -148,3 +150,4 @@ function makePollRequest(pollRequestCallback){
 function getCurrentPolls(pollsResponseObj){
 
 }
+*/
