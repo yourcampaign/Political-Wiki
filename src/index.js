@@ -22,7 +22,7 @@
 'use strict';
 
 var AlexaSkill = require('./AlexaSkill'),
-    recipes = require('./recipes');
+    stances = require('./stances');
 
 var APP_ID = undefined; //OPTIONAL: replace with 'amzn1.echo-sdk-ams.app.[your-unique-value-here]';
 
@@ -32,7 +32,7 @@ var APP_ID = undefined; //OPTIONAL: replace with 'amzn1.echo-sdk-ams.app.[your-u
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance
  */
-var Stance = function () {
+var CandidateStance = function () {
     AlexaSkill.call(this, APP_ID);
 };
 
@@ -57,7 +57,7 @@ CandidateStance.prototype.intentHandlers = {
         }
 
         var cardTitle = slotName +". ",
-            stance = stances[candidateName + " " +" "],
+            stance = stances[candidateName + " college tuiton"],
             speechOutput,
             repromptOutput;
         if (stance) {
@@ -68,7 +68,7 @@ CandidateStance.prototype.intentHandlers = {
             response.tell(speechOutput, cardTitle, recipe);
         } else {
             var speech;
-            if (itemName) {
+            if (candidateName) {
                 speech = "I'm sorry, I currently do not know the stance for " + candidateName + ". What else can I help with?";
             } else {
                 speech = "I'm sorry, I currently do not know that info. What else can I help with?";
