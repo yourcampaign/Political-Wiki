@@ -114,3 +114,40 @@ exports.handler = function (event, context) {
     var CandidateStance = new CandidateStance();
     CandidateStance.execute(event, context);
 };
+
+/*
+
+function makePollRequest(pollRequestCallback){
+  var endpoint = 'http://elections.huffingtonpost.com/pollster/api/polls.json?chart=2016-general-election-trump-vs-clinton&sort&after=2016-09-29';
+
+  http.get(endpoint, function(res){
+    var pollsResponseString = '';
+    console.log('Status Code: ' + res.statusCode);
+
+    if(res.statusCode != 200){
+      pollRequestCallback( new Error("Non 200 Response"));
+    }
+
+    res.on('data', function(data){
+      pollsResponseString += data;
+    });
+
+    res.on('end', function(){
+      var pollsResponseObject = JSON.parse(pollsResponseString);
+
+      if (pollsResponseObject.error) {
+                console.log("Polls error: " + pollsResponseObj.error.message);
+                pollRequestCallback(new Error(pollsResponseObj.error.message));
+            } else {
+              Alexa.tell
+                var curPolls = getCurrentPolls(pollsResponseObject);
+                pollsResponseObject(null, curPolls);
+            }
+    });
+
+  })
+}
+function getCurrentPolls(pollsResponseObj){
+
+}
+*/
